@@ -1,0 +1,19 @@
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+yazi-ekle:
+    path:     /yazi-ekle
+    defaults: { _controller: AppBundle:Default:yaziEkle }
+
+listele:
+    path:     /listele
+    defaults: { _controller: AppBundle:Default:yaziListele }
+
+yazi:
+    path:     /yazi/{slug}
+    defaults: { _controller: AppBundle:Default:yazininTamami }
+
+# app/config/routing.yml
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
