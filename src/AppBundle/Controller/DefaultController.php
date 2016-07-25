@@ -48,14 +48,14 @@ class DefaultController extends Controller
 
     public function yazininTamamiAction($slug){
 
-        $url = $this->generateUrl(
+       /* $url = $this->generateUrl(
             'yazi',
             array('slug' => 'my-blog-post')
-        );
+        );*/
 
         $em = $this->getDoctrine()->getManager();
 
-        $yazininTamami = $em->getRepository('AppBundle:Yazi') -> findOneBy(array('id'=>$url));
+        $yazininTamami = $em->getRepository('AppBundle:Yazi') -> findOneBy(array('id'=>$slug));
 
         return $this->render('liste/tum_yazi.html.twig', array('yazi'=>$yazininTamami));
     }
