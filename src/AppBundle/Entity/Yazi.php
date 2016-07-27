@@ -110,6 +110,7 @@ class Yazi
      */
     public function setYazi($yazi)
     {
+        $yazi = strip_tags($yazi);
         $this->yazi = $yazi;
 
         return $this;
