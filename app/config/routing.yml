@@ -14,6 +14,10 @@ yazi:
     path:     /yazi/{slug}
     defaults: { _controller: AppBundle:Default:yazininTamami }
 
+admin:
+    path:     /admin
+    defaults: { _controller: AppBundle:Default:adminSayfa }
+
 # app/config/routing.yml
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
